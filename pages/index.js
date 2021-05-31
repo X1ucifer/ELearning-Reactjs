@@ -18,16 +18,16 @@ const Index = ({ courses }) => {
     return (
         <React.Fragment>
             <MainBanner />
-            <Features />
+            {/* <Features /> */}
             <TopCourses courses={courses} />
-            <About />
-            <Testimonials />
-            <Instance />
-            <Partner />
-            <Ad />
-            <Funfacts />
-            <Blog />
-            <EdemyPremium />
+            {/* <About /> */}
+            {/* <Testimonials /> */}
+            {/* <Instance /> */}
+            {/* <Partner /> */}
+            {/* <Ad /> */}
+            {/* <Funfacts /> */}
+            {/* <Blog /> */}
+            {/* <EdemyPremium /> */}
         </React.Fragment>
     )
 }

@@ -38,7 +38,7 @@ const Navbar = ({ user }) => {
 
                             <Link href="/">
                                 <a onClick={toggleNavbar} className="navbar-brand">
-                                    <strong>SpyBerrys</strong>
+                                    <strong style={{color:'white',}}>SpyBerrys</strong>
                                 </a>
                             </Link>
                             <div >
@@ -83,8 +83,6 @@ const Navbar = ({ user }) => {
                                         
                                     </li>
 
-
-                                    
 
                                     <li className="nav-item">
                                         <Link href="/become-a-teacher">
