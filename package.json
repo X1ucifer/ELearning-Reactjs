@@ -1,4 +1,5 @@
 {
+    "homepage": "http://X1ucifer.github.io/Spyberrys",
     "name": "edemy",
     "version": "1.5.0",
     "description": "eDemy - React Next Online Courses & Education Template",
@@ -6,7 +7,8 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
-        "start": "next start -p 3040"
+        "start": "next start -p 3040",
+        "predeploy":"npm run build"
     },
     "author": "EnvyTheme.com",
     "license": "ISC",
