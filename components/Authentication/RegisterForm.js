@@ -50,7 +50,7 @@ const RegisterForm = () => {
 
     return (
         <div className="register-form">
-            <h2>Register</h2>
+            <h2 style={{textAlign:'center',}}>Signup</h2>
             <Alert color="danger" isOpen={error ? true : false} toggle={onDismiss}>
                 {error}
             </Alert>

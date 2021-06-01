@@ -10,7 +10,7 @@ function ImgSlider() {
     let settings = {
         dots: true,
         infinite: true,
-        speed: 600,
+        speed: 800,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
@@ -41,7 +41,8 @@ function ImgSlider() {
 export default ImgSlider;
 
 const Carousel = styled(Slider)`
-    margin-top: 5px;
+    margin-top: 8px;
+    // overflow: hidden;
 
 
     .slick-dots li.slick-active button:before {

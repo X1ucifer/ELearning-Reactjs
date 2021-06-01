@@ -45,7 +45,7 @@ const LoginForm = () => {
     }
     return (
         <div className="login-form">
-            <h2>Login</h2>
+            <h2 style={{textAlign:'center',}}>Login</h2>
 
             <Alert color="danger" isOpen={error ? true : false} toggle={onDismiss}>
                 {error}

@@ -38,7 +38,7 @@ const Navbar = ({ user }) => {
 
                             <Link href="/">
                                 <a onClick={toggleNavbar} className="navbar-brand">
-                                    <strong style={{color:'white',}}>SpyBerrys</strong>
+                                    <strong style={{ color: 'white', }}>SpyBerrys</strong>
                                 </a>
                             </Link>
                             <div >
@@ -63,8 +63,8 @@ const Navbar = ({ user }) => {
                                 <ul className="navbar-nav">
                                     <li className="nav-item">
                                         <Link href="/" activeClassName="active">
-                                            <a onClick={e => e.preventDefault()} className="nav-link">
-                                                Home 
+                                            <a className="nav-link">
+                                                Home
                                             </a>
                                         </Link>
 
@@ -76,11 +76,11 @@ const Navbar = ({ user }) => {
                                     <li className="nav-item megamenu">
                                         <Link href="/">
                                             <a onClick={e => e.preventDefault()} className="nav-link">
-                                                Courses 
+                                                Courses
                                             </a>
                                         </Link>
 
-                                        
+
                                     </li>
 
 
@@ -171,11 +171,21 @@ const Navbar = ({ user }) => {
                                                 </ul>
                                             </div>
                                         ) : (
-                                            <Link href="/authentication">
-                                                <a className="default-btn">
-                                                    <i className="flaticon-user"></i> Login/Register <span></span>
-                                                </a>
-                                            </Link>
+                                            <div>
+                                                <Link href="/authentication">
+                                                    <a className="default-btn">
+                                                        <i className="flaticon-user"></i> Login <span></span>
+                                                    </a>
+
+                                                </Link>
+                                                <Link href="/signup">
+                                                    <a className="default-btn">
+                                                        <i className="flaticon-user"></i> Signup <span></span>
+                                                    </a>
+
+                                                </Link>
+                                            </div>
+
                                         )}
                                     </div>
                                 </div>

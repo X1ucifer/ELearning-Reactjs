@@ -6,23 +6,24 @@ import RegisterForm from '../components/Authentication/RegisterForm'
 const Authentication = () => {
     return (
         <React.Fragment>
-            <PageBanner 
+            {/* <PageBanner 
                 pageTitle="Authentication" 
                 homePageUrl="/" 
                 homePageText="Home" 
                 activePageText="Authentication" 
-            />  
+            />   */}
 
             <div className="profile-authentication-area ptb-100">
                 <div className="container">
-                    <div className="row">
+                    <div className="row d-flex justify-content-center">
                         <div className="col-lg-6 col-md-12">
                             <LoginForm />
                         </div>
                         
-                        <div className="col-lg-6 col-md-12">
+                        {/* <div className="col-lg-6 col-md-12">
                             <RegisterForm />
-                        </div>
+                        </div> */}
+                        
                     </div>
                 </div>
             </div>
