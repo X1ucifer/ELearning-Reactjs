@@ -83,7 +83,7 @@ const Wrap = styled.div`
         max-width: 100%;
         width: 100%;
         height: 100%;
-        border-radius: 26px;
+        border-radius: 2px;
         border: 4px solid transparent;
         overflow: hidden;
     }

@@ -14,8 +14,8 @@ module.exports = withPWA({
     env: {
         JWT_SECRET: "djhfghbdsgrasklkajsdgf",
         SENDGRID_KEY: 'SG.4py49dSvRsuOA_y1LvKZWg.KCRikQIJDVT_.....Q',
-        CLOUDINARY_URL: "https://api.cloudinary.com/v1_1/d.......",
-        CLOUDINARY_VIDEO_URL: "https://api.cloudinary.com/v1_1/d.....",
+        CLOUDINARY_URL: "https://api.cloudinary.com/v1_1/jinu/image/upload",
+        CLOUDINARY_VIDEO_URL: "https://api.cloudinary.com/v1_1/jinu/video/upload",
         STRIPE_SECRET_KEY: "sk_test_.....",
         STRIPE_PUBLISHABLE_KEY: "pk_test_...."
     }
