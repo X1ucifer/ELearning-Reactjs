@@ -1,0 +1,41 @@
+[33mcommit 975f6283268a385e0414376ed073d35d0d111e6f[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Akhil <portforwarding03@gmail.com>
+Date:   Thu Jun 3 10:18:53 2021 -0700
+
+    err connect
+
+[33mcommit 875cae03187990c328a154de9bb91ac8106790db[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Akhil <portforwarding03@gmail.com>
+Date:   Tue Jun 1 14:31:31 2021 -0700
+
+    5th commit add login signup and styles
+
+[33mcommit 1791f76ce3862d5b4ea6bcc9c18ed8c9b43ddea9[m
+Author: Akhil <portforwarding03@gmail.com>
+Date:   Mon May 31 14:24:09 2021 -0700
+
+    4th commit add material header and home_slider
+
+[33mcommit f40137baecc440a239fc58286adde2687b41258d[m
+Author: Akhil <portforwarding03@gmail.com>
+Date:   Mon May 31 11:36:09 2021 -0700
+
+    third commit change search bar and dropdowns
+
+[33mcommit a14cb0d62b48dbecbe11a68dd0a534c427038d94[m
+Author: Akhil <portforwarding03@gmail.com>
+Date:   Mon May 31 10:31:04 2021 -0700
+
+    sec commit add theme color
+
+[33mcommit 9d2067ac684bb67c366531215721e068a73e99ff[m
+Author: Akhil <portforwarding03@gmail.com>
+Date:   Mon May 31 10:28:21 2021 -0700
+
+    sec commit add theme colors
+
+[33mcommit f2950b830f35871965781ed13ec93377cf75b761[m
+Author: Akhil <portforwarding03@gmail.com>
+Date:   Mon May 31 10:11:03 2021 -0700
+
+    first commit add bg colors
