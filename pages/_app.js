@@ -9,6 +9,7 @@ import 'react-tabs/style/react-tabs.css'
 import 'react-image-lightbox/style.css'
 import '../public/css/style.scss'
 import '../public/css/responsive.css'
+import '../public/css/courseInnerCard.scss'
 
 import Layout from '../components/_App/Layout';
 import axios from 'axios'

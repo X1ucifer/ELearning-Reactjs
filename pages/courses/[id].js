@@ -7,24 +7,89 @@ resetIdCounter()
 import axios from 'axios'
 import baseUrl from '@/utils/baseUrl'
 import CoursesCurriculum from '@/components/Courses/CoursesCurriculum'
+import ModalVideo from 'react-modal-video'
+import Link from 'next/link'
 
 const Details = ({ course, user }) => {
+
+    const [isOpen, setIsOpen] = React.useState(true);
+    const openModal = () => {
+        setIsOpen(!isOpen);
+    }
+    const youtube_parser = (url) => {
+        var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+        var match = url.match(regExp);
+        return (match && match[7].length == 11) ? match[7] : false;
+    }
     // console.log(course)
     return (
         <React.Fragment>
-            <PageBanner 
-                pageTitle={course.title} 
-                homePageUrl="/" 
-                homePageText="Home" 
-                innerPageUrl="/courses-1" 
-                innerPageText="Courses" 
-                activePageText={course.title} 
-            />  
+
 
             <div className="courses-details-area pb-100">
-                <div className="courses-details-image">
-                    <img src={course.coverPhoto} alt={course.title} />
+                <div class="movie_card" id="bright">
+
+                    <div class="info_section">
+                        <div class="movie_header">
+                            {/* <img class="locandina" src={course.coverPhoto} alt={course.title} /> */}
+                            <h1>{course.title}</h1>
+                            <h4>{course.user.name}</h4>
+                            <span class="minutes">{course.duration}</span>
+                            <p class="type">{course.enrolled} Students</p>
+                            <span class="minutes">₹ {course.price}</span>
+
+                            {/* <div className="col-lg-4 col-md-12"> */}
+                                <CoursesDetailsSidebar {...course} loggedInUser={user} />
+                            {/* </div> */}
+
+                        </div>
+                        <div class="movie_desc">
+                            <p class="text">
+                                {course.overview}
+                            </p>
+                        </div>
+
+                        <div className="video-btn">
+
+                            <Link href="#">
+                                <a
+                                    onClick={e => { e.preventDefault(); openModal() }}
+                                    className="popup-youtube"
+                                >
+                                    <i className="flaticon-play" style={{ color: '#606060' }}></i>
+                                </a>
+                            </Link>
+                        </div>
+
+                        <ModalVideo
+                            channel='youtube'
+                            isOpen={!isOpen}
+                            videoId={youtube_parser(course.course_preview_video)}
+                            onClose={() => setIsOpen(!isOpen)}
+                        />
+
+                        <div class="movie_social">
+
+                            <ul className="social-link">
+                                <li><a href="#" className="d-block" target="_blank"><i className='bx bxl-facebook'></i></a></li>
+                                <li><a href="#" className="d-block" target="_blank"><i className='bx bxl-twitter'></i></a></li>
+                                <li><a href="#" className="d-block" target="_blank"><i className='bx bxl-instagram'></i></a></li>
+                                <li><a href="#" className="d-block" target="_blank"><i className='bx bxl-linkedin'></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="blur_back">
+                        <img src={course.coverPhoto} />
+
+                    </div>
+
+
                 </div>
+
+                {/* Main Card */}
+
+
 
                 <div className="container">
                     <div className="row">
@@ -37,7 +102,7 @@ const Details = ({ course, user }) => {
                                         <Tab>Instructor</Tab>
                                         <Tab>Reviews</Tab>
                                     </TabList>
-                                
+
                                     <TabPanel>
                                         <div className="courses-overview">
                                             <h3>Course Description</h3>
@@ -58,13 +123,13 @@ const Details = ({ course, user }) => {
                                                             <img src={`${course.user.profilePhoto ? course.user.profilePhoto : "/images/advisor/advisor2.jpg"}`} alt={course.user.name} />
                                                         </div>
                                                     </div>
-                        
+
                                                     <div className="col-lg-8 col-md-8">
                                                         <div className="advisor-content">
                                                             <h3>{course.user.name}</h3>
                                                             <span className="sub-title">{course.user.designation || "Empty"}</span>
                                                             <p>{course.user.about || "Empty"}</p>
-                                                            
+
                                                             <ul className="social-link">
                                                                 <li>
                                                                     <a href={course.user.fb_url || '#'} className="d-block" target="_blank">
@@ -165,12 +230,12 @@ const Details = ({ course, user }) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div className="courses-review-comments">
                                             <h3>3 Reviews</h3>
                                             <div className="user-review">
                                                 <img src="/images/user1.jpg" alt="image" />
-                                                
+
                                                 <div className="review-rating">
                                                     <div className="review-stars">
                                                         <i className='bx bxs-star checked'></i>
@@ -189,7 +254,7 @@ const Details = ({ course, user }) => {
 
                                             <div className="user-review">
                                                 <img src="/images/user2.jpg" alt="image" />
-                                                
+
                                                 <div className="review-rating">
                                                     <div className="review-stars">
                                                         <i className='bx bxs-star checked'></i>
@@ -208,7 +273,7 @@ const Details = ({ course, user }) => {
 
                                             <div className="user-review">
                                                 <img src="/images/user3.jpg" alt="image" />
-                                                
+
                                                 <div className="review-rating">
                                                     <div className="review-stars">
                                                         <i className='bx bxs-star checked'></i>
@@ -227,7 +292,7 @@ const Details = ({ course, user }) => {
 
                                             <div className="user-review">
                                                 <img src="/images/user4.jpg" alt="image" />
-                                                
+
                                                 <div className="review-rating">
                                                     <div className="review-stars">
                                                         <i className='bx bxs-star checked'></i>
@@ -249,14 +314,12 @@ const Details = ({ course, user }) => {
                             </div>
                         </div>
 
-                        <div className="col-lg-4 col-md-12">
-                            <CoursesDetailsSidebar {...course} loggedInUser={user} />
-                        </div>
+
                     </div>
                 </div>
             </div>
 
-            <YouMightLikeTheCourses />
+            {/* <YouMightLikeTheCourses /> */}
         </React.Fragment>
     )
 }

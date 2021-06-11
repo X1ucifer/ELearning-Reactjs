@@ -89,8 +89,8 @@ const Create = () => {
         // console.log(post.file_url)
         const data = new FormData()
         data.append('file', course.profilePhoto)
-        data.append('upload_preset', 'akhil_images')
-        data.append('cloud_name', 'jinu')
+        data.append('upload_preset', '')
+        data.append('cloud_name', '')
         let response
         if(course.profilePhoto){
             response = await axios.post(process.env.CLOUDINARY_URL, data)
