@@ -27,29 +27,29 @@ const Details = ({ course, user }) => {
 
 
             <div className="courses-details-area pb-100">
-                <div class="movie_card" id="bright">
+                <div className="movie_card" id="bright">
 
-                    <div class="info_section">
-                        <div class="movie_header">
+                    <div className="info_section">
+                        <div className="movie_header">
                             {/* <img class="locandina" src={course.coverPhoto} alt={course.title} /> */}
                             <h1>{course.title}</h1>
                             <h4>{course.user.name}</h4>
-                            <span class="minutes">{course.duration}</span>
-                            <p class="type">{course.enrolled} Students</p>
-                            <span class="minutes">₹ {course.price}</span>
+                            <span className="minutes">{course.duration}</span>
+                            <p className="type">{course.enrolled} Students</p>
+                            <span className="minutes">₹ {course.price}</span>
 
                             {/* <div className="col-lg-4 col-md-12"> */}
-                            <CoursesDetailsSidebar {...course} loggedInUser={user} />
+                            <CoursesDetailsSidebar  loggedInUser={user} />
                         </div>
 
                     </div>
-                    <div class="movie_desc">
-                        <p class="text">
+                    <div className="movie_desc">
+                        <p className="text">
                             {course.overview}
                         </p>
                     </div>
 
-                    <div className="video-btn">
+                    {/* <div className="video-btn">
 
                         <Link href="#">
                             <a
@@ -66,9 +66,9 @@ const Details = ({ course, user }) => {
                         isOpen={!isOpen}
                         videoId={youtube_parser(course.course_preview_video)}
                         onClose={() => setIsOpen(!isOpen)}
-                    />
+                    /> */}
 
-                    <div class="movie_social">
+                    <div className="movie_social">
 
                         <ul className="social-link">
                             <li><a href="#" className="d-block" target="_blank"><i className='bx bxl-facebook'></i></a></li>
@@ -79,8 +79,8 @@ const Details = ({ course, user }) => {
                     </div>
                 </div>
 
-                <div class="blur_back">
-                    <img src={course.coverPhoto} />
+                <div className="blur_back">
+                    {/* <img src={course.coverPhoto} /> */}
 
                 </div>
 
